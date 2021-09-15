@@ -3,7 +3,7 @@ uuid = "e56081f5-16fb-4890-8267-56238ff0b8f8"
 authors = ["monty <velimir.vesselinov@gmail.com>"]
 version = "0.1.0"
 
-deps]
+[deps]
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 Cairo = "159f3aea-2a34-519c-b102-8c37f9878175"
 Clustering = "aaaa29a8-35af-508c-8bc3-b662a17a0fe5"
