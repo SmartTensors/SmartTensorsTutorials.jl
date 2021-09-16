@@ -1,1 +1,1 @@
-# SmartTensorsTutorials.jl
+# SmartTensors Tutorials
