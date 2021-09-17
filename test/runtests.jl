@@ -1,3 +1,3 @@
 import SmartTensorsTutorials
 
-SmartTensorsTutorials.notebookscript("Functions")
+SmartTensorsTutorials.notebookscript("Julia_Introduction")
