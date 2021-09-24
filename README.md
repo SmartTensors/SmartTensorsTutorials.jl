@@ -10,7 +10,7 @@ We will cover a series of general, frequently-solved ML tasks such as:
 The unsupervised machine learning methods are:
 * k-means clustering
 * principal component analysis
-* non-nnegative matrix factorization
+* non-negative matrix factorization
 * non-negative matrix factorization with customized k-means clustering
 
 The supervised machine learning are:
