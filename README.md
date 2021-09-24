@@ -31,14 +31,17 @@ The `JuliaWorkshop` module covers various topics which are organized into a seri
 
 Specifically related to Machine Learning, we will cover a series of general, frequently-solved ML tasks such as:
 * Unsupervised and supervised machine learning
+
 The unsupervised machine learning methods are:
 * k-means clustering
 * principal component analysis
 * no-nnegative matrix factorization
 * non-negative matrix factorization with customized k-means clustering
+
 The supervised machine learning are:
 * deep neural network
 * convolutional neural network
+
 We will also demonstrate guided tutorials using real data 
 * Spatiotemporal data analytics
 * GeoThermal exploration
