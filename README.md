@@ -3,15 +3,9 @@
 ## Contents
 ------------
 
-The `JuliaWorkshop` module showcases how to code and perform machine-learning analyses in Julia.
-
-The `JuliaWorkshop` module covers various topics which are organized into a series of Jupyter and Pluto notebooks:
-* Functional programming
-* Parallelization
-* GPU acceleration
-* Machine Learning
-
-Specifically related to Machine Learning, we will cover a series of general, frequently-solved ML tasks such as:
+The `Workshop` will showcases how to code and perform machine-learning analyses in Julia.
+Especially, we will demonstrate what tools are good geoscience data analysis.
+We will cover a series of general, frequently-solved ML tasks such as:
 * Unsupervised and supervised machine learning
 
 The unsupervised machine learning methods are:
