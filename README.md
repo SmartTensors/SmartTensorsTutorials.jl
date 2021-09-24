@@ -69,7 +69,7 @@ Julia REPL looks like this:
 Julia uses GIT for package management.
 GIT needs to be installed and configured as well.
 
-To make Julia and GIT work behind the LANL (or different institute) firewall execute:
+To make Julia and GIT work behind the LANL firewall execute:
 
 ``` bash
 	export ALL_PROXY=proxyout.lanl.gov:8080
@@ -90,7 +90,9 @@ You can also do this in the Julia REPL:
 	ENV["https_proxy"] = "http://proxyout.lanl.gov:8080"
 	ENV["no_proxy"] = ".lanl.gov"
 ```
-
+`
+Those proxies are for LANL, different institute may have different proxies please check with your institute.
+`
 ### Jupyter Notebooks
 
 Jupyter notebooks are in-browser interactive programming environments that we will use for this workshop.
