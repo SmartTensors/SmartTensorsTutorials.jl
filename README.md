@@ -1,23 +1,5 @@
 # GSA/AGU workshop setup guideline
 
-A module capturing a series of notebooks and scripts presenting Julia capabilities.
-
-To install, execute in Julia REPL (if it does not work follow all the steps under `Julia and GIT` [below](#julia-and-git)):
-
-``` julia
-	ENV["PYTHON"] = ""
-	import Pkg
-	Pkg.add(url="https://gitlab.lanl.gov/julialang/juliaworkshop.jl", rev="master")
-```
-
-The official Julia documentation is available at [https://docs.julialang.org](https://docs.julialang.org).
-
-The official Julia [discourse https://discourse.julialang.org](https://discourse.julialang.org) is an excellent resource for all kind of questions and insights in addition to [Stack Overflow](https://stackoverflow.com/questions/tagged/julia).
-
-In the Julia community, it is not recommended to push pull requests, submit coding issues, or ask questions before you have checked for existing answers or insights at the [Julia discourse website](https://discourse.julialang.org).
-
-For LANL specific Julia questions, you can e-mail to the LANL mailing list [julialang.lanl.gov](mailto:julialang.lanl.gov)
-
 ## Contents
 ------------
 
@@ -136,14 +118,6 @@ If you get "Private key location for 'git@github.com'" julia message, to resolve
 Jupyter notebooks are in-browser interactive programming environments that we will use for this workshop.
 The notebooks are run through IJulia.
 
-To access the `JuliaWorkshop` notebooks, execute:
-
-``` julia
-	JuliaWorkshop.notebooks()
-```
-
-When `JuliaWorkshop` is installed it also installs IJulia.
-
 To install IJulia seperately, open a Julia REPL and run:
 
 ```julia
@@ -168,3 +142,12 @@ The `Workshop` has following notebooks (in the notebook directory) that can be e
 	Unsupervised_ML
 	Supervised_ML
 	Geothermalcloud
+```
+## Julia support
+
+The official Julia documentation is available at [https://docs.julialang.org](https://docs.julialang.org).
+
+The official Julia [discourse https://discourse.julialang.org](https://discourse.julialang.org) is an excellent resource for all kind of questions and insights in addition to [Stack Overflow](https://stackoverflow.com/questions/tagged/julia).
+
+In the Julia community, it is not recommended to push pull requests, submit coding issues, or ask questions before you have checked for existing answers or insights at the [Julia discourse website](https://discourse.julialang.org).
+
