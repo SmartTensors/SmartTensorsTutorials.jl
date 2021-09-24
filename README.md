@@ -30,51 +30,20 @@ The `JuliaWorkshop` module covers various topics which are organized into a seri
 * Machine Learning
 
 Specifically related to Machine Learning, we will cover a series of general, frequently-solved ML tasks such as:
-* Classification
-* Regression
-* Blind source separation
-* Feature extraction
-* Anomaly Detection
+* Unsupervised and supervised machine learning
+The unsupervised machine learning methods are:
+* k-means clustering
+* principal component analysis
+* no-nnegative matrix factorization
+* non-negative matrix factorization with customized k-means clustering
+The supervised machine learning are:
+* deep neural network
+* convolutional neural network
+We will also demonstrate guided tutorials using real data 
 * Spatiotemporal data analytics
+* GeoThermal exploration
 * Filling datagaps
 
-We will also present a series of realworld ML examples related to:
-* Jupiter redspot
-* CO2 monitoring
-* GeoThermal exploration
-* Turbulence
-* Europe Climate
-* California Wildfires
-* Contaminant transport (i.e., water unmixing)
-
-## Notebooks
-
-The `JuliaWorkshop` notebooks can be executed in Jupyter or in the Julia REPL.
-
-For example, the `Parallelization` notebook can be accessed using:
-
-``` julia
-	JuliaWorkshop.notebook("Parallelization")
-```
-
-The `Parallelization` notebook can also be executed as a Julia script in the Julia REPL using:
-
-``` julia
-	JuliaWorkshop.notebookscript("Parallelization")
-```
-
-The script above generates a Julia file named `Parallelization.jl` which can be executed in the Julia REPL.
-
-The `Parallelization` notebook can be processed to generate html, markdown, latex, and script versions using:
-
-``` julia
-	JuliaWorkshop.process_notebook("Parallelization")
-```
-
-To access all the workshop notebooks, execute:
-
-``` julia
-	JuliaWorkshop.notebooks()
 ```
 
 ## Getting Started
@@ -189,3 +158,11 @@ To open a Jupyter Notebook session in your browser, run the following in a REPL:
 ```
 
 The first time you run this, it will install `jupyter` using `conda`.
+
+The `Workshop` has following notebooks (in the notebook directory) that can be executed in Jupyter or in the Julia REPL.
+
+``` julia
+	Julia_Introduction
+	Unsupervised_ML
+	Supervised_ML
+	Geothermalcloud
