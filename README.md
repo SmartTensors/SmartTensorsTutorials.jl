@@ -1,10 +1,9 @@
 # GSA/AGU workshop setup guideline
 
 ## Contents
-------------
 
 The `Workshop` will showcases how to code and perform machine-learning analyses in Julia.
-Especially, we will demonstrate what tools are good geoscience data analysis.
+Especially, we will demonstrate what tools are good for geoscientific data analysis.
 We will cover a series of general, frequently-solved ML tasks such as:
 * Unsupervised and supervised machine learning
 
@@ -25,7 +24,6 @@ We will also demonstrate guided tutorials using real data
 
 
 ## Getting Started
-------------------
 
 Download and install [the latest version of Julia](https://julialang.org/downloads/).
 The current stable version is Julia 1.6.2.
@@ -71,7 +69,7 @@ Julia REPL looks like this:
 Julia uses GIT for package management.
 GIT needs to be installed and configured as well.
 
-To make Julia and GIT work behind the LANL firewall execute:
+To make Julia and GIT work behind the LANL (or different institute) firewall execute:
 
 ``` bash
 	export ALL_PROXY=proxyout.lanl.gov:8080
@@ -91,20 +89,6 @@ You can also do this in the Julia REPL:
 	ENV["http_proxy"] = "http://proxyout.lanl.gov:8080"
 	ENV["https_proxy"] = "http://proxyout.lanl.gov:8080"
 	ENV["no_proxy"] = ".lanl.gov"
-```
-
-Now, you can install `JuliaWorkshop` module:
-
-``` julia
-	ENV["PYTHON"] = ""
-	import Pkg
-	Pkg.add(url="https://gitlab.lanl.gov/julialang/juliaworkshop.jl", rev="master")
-```
-
-If you get "Private key location for 'git@github.com'" julia message, to resolve it execute:
-
-``` bash
-	ssh-add ~/.ssh/id_rsa
 ```
 
 ### Jupyter Notebooks
@@ -130,13 +114,32 @@ To open a Jupyter Notebook session in your browser, run the following in a REPL:
 The first time you run this, it will install `jupyter` using `conda`.
 
 The `Workshop` has following notebooks (in the notebook directory) that can be executed in Jupyter or in the Julia REPL.
+* Julia_Introduction
+* Unsupervised_ML
+* Supervised_ML
+* Geothermalcloud
 
-``` julia
-	Julia_Introduction
-	Unsupervised_ML
-	Supervised_ML
-	Geothermalcloud
+## Required packages/modules to run the above mentioned notebooks
+```julia
+	ENV["PYTHON"] = ""
+	import Pkg
+	Pkg.add("NMF")
+	Pkg.add("Clustering")
+	Pkg.add("Statistics")
+	Pkg.add("MultivariateStats")
+	Pkg.add("Distances")
+	Pkg.add("Random")
+	Pkg.add("Mads")
+	Pkg.add("NMFk")
+	Pkg.add("DelimitedFiles")
+	Pkg.add("Cairo")
+	Pkg.add("Fontconfig")
+	Pkg.add("Gadfly")
+	Pkg.add("Compose")
+	Pkg.add("GMT") # this is not mandatory but an alternative tool of ArcGIS
 ```
+
+
 ## Julia support
 
 The official Julia documentation is available at [https://docs.julialang.org](https://docs.julialang.org).
