@@ -1,4 +1,4 @@
-# GSA/AGU-2021 workshop setup guideline
+# GSA/AGU 2021 workshop setup guideline
 
 ## Contents
 
