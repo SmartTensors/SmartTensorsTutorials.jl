@@ -2,7 +2,7 @@
 
 ## Contents
 
-The `Workshop` will showcases how to code and perform machine-learning analyses in Julia.
+The `Workshop` will showcase how to code and perform machine-learning analyses in Julia.
 Especially, we will demonstrate what tools are good for geoscientific data analysis.
 We will cover a series of general, frequently-solved ML tasks such as:
 * Unsupervised and supervised machine learning
