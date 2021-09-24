@@ -35,7 +35,7 @@ Specifically related to Machine Learning, we will cover a series of general, fre
 The unsupervised machine learning methods are:
 * k-means clustering
 * principal component analysis
-* no-nnegative matrix factorization
+* non-nnegative matrix factorization
 * non-negative matrix factorization with customized k-means clustering
 
 The supervised machine learning are:
@@ -47,7 +47,6 @@ We will also demonstrate guided tutorials using real data
 * GeoThermal exploration
 * Filling datagaps
 
-```
 
 ## Getting Started
 ------------------
@@ -57,7 +56,7 @@ The current stable version is Julia 1.6.2.
 
 ### Linux installation
 
-``` bash
+```bash
 	wget https://julialang-s3.julialang.org/bin/linux/x64/1.6/julia-1.6.2-linux-x86_64.tar.gz
 	tar xvzf julia-1.6.2-linux-x86_64.tar.gz
 ```
