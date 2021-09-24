@@ -91,7 +91,7 @@ You can also do this in the Julia REPL:
 	ENV["no_proxy"] = ".lanl.gov"
 ```
 `
-Those proxies are for LANL, different institute may have different proxies please check with your institute.
+**Those proxies are for LANL, different institute may have different proxies please check with your institute.**
 `
 ### Jupyter Notebooks
 
