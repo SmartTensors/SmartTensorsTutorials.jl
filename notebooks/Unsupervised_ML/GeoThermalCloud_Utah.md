@@ -40,10 +40,6 @@ import GMT
 import Images
 ```
 
-    ┌ Info: TensorLy is available
-    └ @ NTFk /Users/vvv/.julia/dev/NTFk/src/NTFkTensorly.jl:8
-
-
 ## Load data
 
 
@@ -154,9 +150,10 @@ NMFk.datanalytics(X, attributes_long; dims=2);
     
 
 
-    Temperature (C): Min 0.1 Max 261.0 StdDev 9.497179 Skewness 10.095466 Count 5214
-    ┌ Info: GTM quartz (C)
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_3.png)
+    
 
 
 
@@ -165,8 +162,14 @@ NMFk.datanalytics(X, attributes_long; dims=2);
     
 
 
+    Temperature (C): Min 0.1 Max 261.0 StdDev 9.497179 Skewness 10.095466 Count 5214
     GTM quartz (C): Min -50.870045 Max 222.28357 StdDev 26.329222 Skewness 0.24256101 Count 3460
+    GTM chalcedony (C): Min -81.64773 Max 208.67426 StdDev 27.450817 Skewness 0.3369881 Count 3460
+    ┌ Info: GTM quartz (C)
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
     ┌ Info: GTM chalcedony (C)
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+    ┌ Info: pH ()
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
 
 
@@ -176,9 +179,10 @@ NMFk.datanalytics(X, attributes_long; dims=2);
     
 
 
-    GTM chalcedony (C): Min -81.64773 Max 208.67426 StdDev 27.450817 Skewness 0.3369881 Count 3460
-    ┌ Info: pH ()
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_7.png)
+    
 
 
 
@@ -188,7 +192,13 @@ NMFk.datanalytics(X, attributes_long; dims=2);
 
 
     pH (): Min 3.4 Max 10.2 StdDev 0.44822767 Skewness -0.45681924 Count 3941
+    TDS (ppm): Min 122.0 Max 329000.0 StdDev 78777.95 Skewness 2.9479313 Count 312
+    Al (ppm): Min 0.0 Max 1.251 StdDev 0.10527698 Skewness 9.031239 Count 221
     ┌ Info: TDS (ppm)
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+    ┌ Info: Al (ppm)
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+    ┌ Info: B (ppm)
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
 
 
@@ -198,9 +208,10 @@ NMFk.datanalytics(X, attributes_long; dims=2);
     
 
 
-    TDS (ppm): Min 122.0 Max 329000.0 StdDev 78777.95 Skewness 2.9479313 Count 312
-    ┌ Info: Al (ppm)
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_11.png)
+    
 
 
 
@@ -209,8 +220,14 @@ NMFk.datanalytics(X, attributes_long; dims=2);
     
 
 
-    Al (ppm): Min 0.0 Max 1.251 StdDev 0.10527698 Skewness 9.031239 Count 221
-    ┌ Info: B (ppm)
+    B (ppm): Min 0.0 Max 76.5 StdDev 2.6950865 Skewness 15.190172 Count 2284
+    Ba (ppm): Min 0.002 Max 4.5 StdDev 0.2898333 Skewness 11.825817 Count 310
+    Be (ppm): Min 5.3333333e-5 Max 0.013 StdDev 0.00089295243 Skewness 10.968073 Count 244
+    ┌ Info: Ba (ppm)
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+    ┌ Info: Be (ppm)
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+    ┌ Info: Br (ppm)
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
 
 
@@ -220,9 +237,10 @@ NMFk.datanalytics(X, attributes_long; dims=2);
     
 
 
-    B (ppm): Min 0.0 Max 76.5 StdDev 2.6950865 Skewness 15.190172 Count 2284
-    ┌ Info: Ba (ppm)
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_15.png)
+    
 
 
 
@@ -231,8 +249,14 @@ NMFk.datanalytics(X, attributes_long; dims=2);
     
 
 
-    Ba (ppm): Min 0.002 Max 4.5 StdDev 0.2898333 Skewness 11.825817 Count 310
-    ┌ Info: Be (ppm)
+    Br (ppm): Min 0.0 Max 84.0 StdDev 11.680384 Skewness 3.435088 Count 621
+    Ca (ppm): Min 0.6 Max 2566.6667 StdDev 262.82578 Skewness 4.424904 Count 3772
+    Cl (ppm): Min 0.6 Max 240000.0 StdDev 28681.555 Skewness 5.21565 Count 3923
+    ┌ Info: Ca (ppm)
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+    ┌ Info: Cl (ppm)
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+    ┌ Info: HCO3 (ppm)
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
 
 
@@ -242,59 +266,15 @@ NMFk.datanalytics(X, attributes_long; dims=2);
     
 
 
-    Be (ppm): Min 5.3333333e-5 Max 0.013 StdDev 0.00089295243 Skewness 10.968073 Count 244
-    ┌ Info: Br (ppm)
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_19.png)
+    
 
 
 
     
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_20.png)
-    
-
-
-    Br (ppm): Min 0.0 Max 84.0 StdDev 11.680384 Skewness 3.435088 Count 621
-    ┌ Info: Ca (ppm)
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
-
-
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_22.png)
-    
-
-
-    Ca (ppm): Min 0.6 Max 2566.6667 StdDev 262.82578 Skewness 4.424904 Count 3772
-    ┌ Info: Cl (ppm)
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
-
-
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_24.png)
-    
-
-
-    Cl (ppm): Min 0.6 Max 240000.0 StdDev 28681.555 Skewness 5.21565 Count 3923
-    ┌ Info: HCO3 (ppm)
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
-
-
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_26.png)
-    
-
-
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_27.png)
-    
-
-
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_28.png)
     
 
 
@@ -311,18 +291,22 @@ NMFk.datanalytics(X, attributes_long; dims=2);
 
 
     
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_30.png)
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_22.png)
     
 
 
 
     
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_31.png)
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_23.png)
     
 
 
     Mg (ppm): Min 0.0 Max 8500.0 StdDev 663.7361 Skewness 6.581147 Count 3760
     Na (ppm): Min 0.5 Max 160000.0 StdDev 17983.25 Skewness 4.946034 Count 3437
+    ┌ Info: Na (ppm)
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
+    ┌ Info: δO18 (‰)
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
     δO18 (‰): Min 2.1499996 Max 16.36 StdDev 2.4535506 Skewness 2.5710073 Count 368
     Name Min Max StdDev Count (non-NaN's)
     Temperature (C) 0.1 261.0 9.497179 10.095466 5214
@@ -343,10 +327,6 @@ NMFk.datanalytics(X, attributes_long; dims=2);
     Mg (ppm) 0.0 8500.0 663.7361 6.581147 3760
     Na (ppm) 0.5 160000.0 17983.25 4.946034 3437
     δO18 (‰) 2.1499996 16.36 2.4535506 2.5710073 368
-    ┌ Info: Na (ppm)
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
-    ┌ Info: δO18 (‰)
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:54
     ┌ Info: Attributes
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:70
 
@@ -592,9 +572,10 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
     
 
 
-    pH: Min 3.4 Max 10.2 StdDev 0.44822767 Skewness -0.45681924 Count 3941
-    ┌ Info: TDS: log10-transformed
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_7.png)
+    
 
 
 
@@ -603,14 +584,11 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
     
 
 
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_9.png)
-    
-
-
+    pH: Min 3.4 Max 10.2 StdDev 0.44822767 Skewness -0.45681924 Count 3941
     TDS: Min 2.0863597 Max 5.5171957 StdDev 0.8672777 Skewness 1.4807001 Count 312
     Al: Min -4.3979397 Max 0.09725732 StdDev 0.8454361 Skewness -0.37494856 Count 221
+    ┌ Info: TDS: log10-transformed
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
     ┌ Info: Al: log10-transformed
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
     ┌ Info: B: log10-transformed
@@ -619,29 +597,27 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
 
 
     
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_10.png)
+    
+
+
+
+    
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_11.png)
     
 
 
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_12.png)
+    
+
+
     B: Min -3.30103 Max 1.8836614 StdDev 0.77384454 Skewness 0.08153698 Count 2284
-    ┌ Info: Ba: log10-transformed
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
-
-
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_13.png)
-    
-
-
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_14.png)
-    
-
-
     Ba: Min -2.69897 Max 0.6532125 StdDev 0.40884706 Skewness -0.013896148 Count 310
     Be: Min -4.273001 Max -1.8860567 StdDev 0.46150032 Skewness -0.83869493 Count 244
+    ┌ Info: Ba: log10-transformed
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
     ┌ Info: Be: log10-transformed
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
     ┌ Info: Br: log10-transformed
@@ -650,13 +626,28 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
 
 
     
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_16.png)
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_14.png)
+    
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_15.png)
     
 
 
     Br: Min -3.0 Max 1.9242793 StdDev 1.0616237 Skewness 0.5956521 Count 621
+    Ca: Min -0.22184873 Max 3.4093695 StdDev 0.43120933 Skewness 0.5738154 Count 3772
     ┌ Info: Ca: log10-transformed
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
+    ┌ Info: Cl: log10-transformed
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_17.png)
+    
 
 
 
@@ -671,21 +662,21 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
     
 
 
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_20.png)
-    
-
-
-    Ca: Min -0.22184873 Max 3.4093695 StdDev 0.43120933 Skewness 0.5738154 Count 3772
     Cl: Min -0.22184873 Max 5.3802114 StdDev 1.0519629 Skewness 1.1927316 Count 3923
     HCO3: Min 1.5682018 Max 3.9645896 StdDev 0.22752158 Skewness 0.051133487 Count 915
-    ┌ Info: Cl: log10-transformed
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
+    K: Min -2.0 Max 4.1139436 StdDev 0.8480291 Skewness 1.8444492 Count 3177
     ┌ Info: HCO3: log10-transformed
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
     ┌ Info: K: log10-transformed
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
+    ┌ Info: Li: log10-transformed
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_21.png)
+    
 
 
 
@@ -694,38 +685,21 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
     
 
 
-    K: Min -2.0 Max 4.1139436 StdDev 0.8480291 Skewness 1.8444492 Count 3177
-    ┌ Info: Li: log10-transformed
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
-
-
 
     
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_24.png)
-    
-
-
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_25.png)
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_23.png)
     
 
 
     Li: Min -3.9586072 Max 2.9867718 StdDev 1.4681796 Skewness 0.6889145 Count 551
     Mg: Min -2.0 Max 3.929419 StdDev 0.5826601 Skewness 1.142913 Count 3760
+    Na: Min -0.30103 Max 5.20412 StdDev 0.985548 Skewness 1.3556563 Count 3437
     ┌ Info: Mg: log10-transformed
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
     ┌ Info: Na: log10-transformed
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
-
-
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_27.png)
-    
-
-
-    Na: Min -0.30103 Max 5.20412 StdDev 0.985548 Skewness 1.3556563 Count 3437
+    ┌ Info: δO18: log10-transformed
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
     δO18: Min 0.33243838 Max 1.2137833 StdDev 0.16311567 Skewness 1.1355046 Count 368
     Name Min Max StdDev Count (non-NaN's)
     Temperature -1.0 2.4166405 0.19028741 -0.5570712 5214
@@ -746,8 +720,6 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
     Mg -2.0 3.929419 0.5826601 1.142913 3760
     Na -0.30103 5.20412 0.985548 1.3556563 3437
     δO18 0.33243838 1.2137833 0.16311567 1.1355046 368
-    ┌ Info: δO18: log10-transformed
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:51
     ┌ Info: Attributes
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPreprocess.jl:70
 
@@ -788,8 +760,8 @@ nruns = 100;
 
 
 ```julia
-# W, H, fitquality, robustness, aic = NMFk.execute(Xnl, nkrange, nruns; cutoff=0.3, resultdir=resultdir, casefilename="nmfk-nl", load=true)
-W, H, fitquality, robustness, aic = NMFk.load(nkrange, nruns; cutoff=0.3, resultdir=resultdir, casefilename="nmfk-nl");
+# W, H, fitquality, robustness, aic, kopt = NMFk.execute(Xnl, nkrange, nruns; cutoff=0.3, resultdir=resultdir, casefilename="nmfk-nl", load=true)
+W, H, fitquality, robustness, aic, kopt = NMFk.load(nkrange, nruns; cutoff=0.3, resultdir=resultdir, casefilename="nmfk-nl");
 ```
 
     Signals:  2 Fit:      186.979 Silhouette:    0.5600511 AIC:    -193490.6 Signal order: [1, 2]
@@ -861,22 +833,6 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
     └ @ JLD /Users/vvv/.julia/packages/JLD/JHrZe/src/jld_types.jl:697
     ┌ Info: Robust k-means analysis results are loaded from file utah/results-postprocessing-nl-100/Hmatrix-3-3_18-1000.jld!
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:67
-    ┌ Warning: Procedure to find unique signals could not identify a solution ...
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
-    ┌ Warning: Procedure to find unique signals could not identify a solution ...
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
-    ┌ Warning: Procedure to find unique signals could not identify a solution ...
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
-    ┌ Warning: type Clustering.KmeansResult{Core.Array{Core.Float32,2},Core.Float32,Core.Int64} not present in workspace; reconstructing
-    └ @ JLD /Users/vvv/.julia/packages/JLD/JHrZe/src/jld_types.jl:697
-    ┌ Info: Robust k-means analysis results are loaded from file utah/results-postprocessing-nl-100/Wmatrix-3-3_5218-1000.jld!
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:67
-    ┌ Warning: Procedure to find unique signals could not identify a solution ...
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
-    ┌ Warning: Procedure to find unique signals could not identify a solution ...
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
-    ┌ Warning: Procedure to find unique signals could not identify a solution ...
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
 
 
 
@@ -887,16 +843,6 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
      "Mg"           0.788068
      "Ca"           0.76783
      "HCO3"         0.549396
-
-
-    ┌ Info: Signal B -> A Count: 6
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPostprocess.jl:316
-    ┌ Info: Signal A -> B Count: 9
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPostprocess.jl:316
-    ┌ Info: Signal C -> C Count: 3
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPostprocess.jl:316
-    ┌ Info: Signal A (S1) (k-means clustering)
-    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPostprocess.jl:333
 
 
 
@@ -921,10 +867,34 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
 
 
     
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_5.png)
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_4.png)
     
 
 
+    ┌ Warning: Procedure to find unique signals could not identify a solution ...
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
+    ┌ Warning: Procedure to find unique signals could not identify a solution ...
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
+    ┌ Warning: Procedure to find unique signals could not identify a solution ...
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
+    ┌ Warning: type Clustering.KmeansResult{Core.Array{Core.Float32,2},Core.Float32,Core.Int64} not present in workspace; reconstructing
+    └ @ JLD /Users/vvv/.julia/packages/JLD/JHrZe/src/jld_types.jl:697
+    ┌ Info: Robust k-means analysis results are loaded from file utah/results-postprocessing-nl-100/Wmatrix-3-3_5218-1000.jld!
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:67
+    ┌ Warning: Procedure to find unique signals could not identify a solution ...
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
+    ┌ Warning: Procedure to find unique signals could not identify a solution ...
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
+    ┌ Warning: Procedure to find unique signals could not identify a solution ...
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkCluster.jl:158
+    ┌ Info: Signal B -> A Count: 6
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPostprocess.jl:316
+    ┌ Info: Signal A -> B Count: 9
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPostprocess.jl:316
+    ┌ Info: Signal C -> C Count: 3
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPostprocess.jl:316
+    ┌ Info: Signal A (S1) (k-means clustering)
+    └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPostprocess.jl:333
     ┌ Info: Signal B (S2) (k-means clustering)
     └ @ NMFk /Users/vvv/.julia/dev/NMFk/src/NMFkPostprocess.jl:333
     ┌ Info: Signal C (S3) (k-means clustering)
@@ -933,11 +903,17 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
 
 
     
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_7.png)
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_6.png)
     
 
 
     
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_8.png)
+    
+
 
 
     
@@ -945,23 +921,17 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
     
 
 
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_10.png)
     
 
 
     
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_11.png)
+    
+
 
 
     
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_12.png)
-    
-
-
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_13.png)
     
 
 
@@ -1041,7 +1011,7 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
 
 
     
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_18.png)
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_17.png)
     
 
 
@@ -1069,11 +1039,17 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
 
 
     
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_20.png)
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_19.png)
     
 
 
     
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_21.png)
+    
+
 
 
     
@@ -1081,13 +1057,13 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
     
 
 
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_23.png)
     
 
 
     
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_24.png)
+    
+
 
 
     
@@ -1095,13 +1071,13 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
     
 
 
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_26.png)
     
 
 
     
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_27.png)
+    
+
 
 
     
@@ -1109,17 +1085,11 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
     
 
 
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_29.png)
     
 
 
     
-
-
-    
-![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_31.png)
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_30.png)
     
 
 
@@ -1166,36 +1136,63 @@ Mads.display("utah/results-postprocessing-nl-100/attributes-3-groups.txt")
 
 
 ```julia
-locations, lhs = DelimitedFiles.readdlm("utah/results-postprocessing-nl-100/locations-3.csv", ',', header=true)
-clusters = sort(unique(locations[:,end]))
-for i=1:size(clusters,1)
-	locations[locations .== clusters[i]] .= Integer(i)
+ldata, lhs = DelimitedFiles.readdlm("utah/results-postprocessing-nl-100/locations-3.csv", ',', header=true)
+signallabels = unique(sort(ldata[:,end]))
+zcolor = Vector{Int64}(undef, length(ldata[:,1]))
+for i = 1:length(clusters)
+	ci = ldata[:,end] .== signallabels[i]
+	println("Signal $(signallabels[i])")
+	si = sortperm(ldata[ci,2+i]; rev=true)
+	display([ldata[ci,1:3] ldata[ci,3+i]][si,:][1:10,:])
+	zcolor[ci] .= i
 end
-locations = convert.(Float32, locations)
 ```
 
 
-    5218×7 Matrix{Float32}:
-        1.0  -111.06   39.4341  0.6627    0.0234368   0.124347    1.0
-        2.0  -111.066  39.4233  0.670377  0.0287214   0.14722     1.0
-        3.0  -111.053  39.4658  0.615474  8.88704f-7  0.203825    1.0
-        4.0  -111.07   39.4286  0.669782  0.0108548   0.0435491   1.0
-        5.0  -111.112  39.3211  0.640001  0.152409    0.00993296  1.0
-        6.0  -111.056  39.4947  0.763099  5.00038f-5  0.0934381   1.0
-        7.0  -111.056  39.4947  0.760624  0.0         0.0882335   1.0
-        8.0  -111.057  39.4947  0.69465   0.0         0.175217    1.0
-        9.0  -111.116  39.328   0.855406  0.0417626   0.00724127  1.0
-       10.0  -111.113  39.3455  0.528689  0.181605    0.00429201  2.0
-        ⋮                                             ⋮           
-     5210.0  -113.908  41.6355  0.575887  0.313012    0.12041     2.0
-     5211.0  -113.908  41.6369  0.497084  0.331514    0.00821709  2.0
-     5212.0  -113.909  41.6333  0.569316  0.312737    0.110429    2.0
-     5213.0  -113.935  41.5866  0.785556  0.214434    0.00475439  1.0
-     5214.0  -113.919  41.6333  0.607505  0.337506    0.103709    2.0
-     5215.0  -113.955  41.563   0.626563  0.314026    0.00605548  2.0
-     5216.0  -113.936  41.6496  0.723449  0.206588    0.00947504  1.0
-     5217.0  -113.926  41.7227  0.644214  0.224996    0.0861631   1.0
-     5218.0  -113.984  41.6888  0.70402   0.208866    0.0225921   1.0
+    10×4 Matrix{Any}:
+     4816  -112.863  41.9985  1.0
+     4684  -112.352  41.9921  0.609925
+     4826  -112.882  41.9907  0.958804
+     4735  -112.512  41.9874  0.664952
+     4739  -112.534  41.986   0.579875
+     4664  -112.304  41.9847  0.60673
+     2510  -111.424  41.9844  0.633779
+     4830  -112.892  41.9796  0.797651
+     4841  -112.916  41.9796  0.849636
+     4851  -112.931  41.9794  0.796321
+
+
+
+    10×4 Matrix{Any}:
+     4330  -112.221  41.298   0.256844
+     4336  -112.222  41.301   0.287342
+     5047  -113.776  40.7324  0.284777
+     1428  -111.769  40.123   0.255764
+     1278  -111.732  40.0933  0.261085
+     1011  -111.62   40.133   0.263974
+     4062  -113.198  38.1853  0.395614
+     1436  -111.769  40.1366  0.291657
+     1144  -111.698  40.078   0.304277
+     2586  -112.063  40.2983  0.244356
+
+
+
+    10×4 Matrix{Any}:
+     4977  -113.607  40.841   0.301232
+     4563  -112.277  41.6733  0.340562
+     5103  -113.794  40.8641  0.385976
+     4801  -113.228  40.8558  0.282822
+     4959  -113.581  40.7563  0.417108
+     5019  -113.734  40.781   0.555066
+     5109  -113.83   40.7844  0.549928
+     4909  -113.476  40.7352  0.406015
+     4802  -113.228  40.856   0.366626
+     5129  -113.888  40.7569  0.523086
+
+
+    Signal A
+    Signal B
+    Signal C
 
 
 
@@ -1210,18 +1207,14 @@ GMT.legend!(box=(pen=false, fill=:white),
                 "S 0.10i c 0.10i gold 0.25p 0.2i B"
                 "S 0.10i c 0.10i blue 0.25p 0.2i C"]),
             par=(:FONT_ANNOT_PRIMARY, "8p,Arial"))
-GMT.scatter!(locations[:,2], locations[:,3], marker=:c, markersize=:0.15,
-    color=(:red, :gold, :blue), zcolor=locations[:,end], alpha=10,
+GMT.scatter!(ldata[:,2], ldata[:,3], marker=:c, markersize=:0.15,
+    color=(:red, :gold, :blue), zcolor=zcolor, alpha=10,
     coast=(proj=:Mercator, 
     DCW=(country="US.UT", pen=(0.5,:black))),
     fmt=:png, savefig="utah/maps/signatures-3")
 Images.load("utah/maps/signatures-3.png")
 ```
 
-       **** WARNING: .setopacityalpha is deprecated (as of 9.53.0) and will be removed in a future release
-       **** See .setfillconstantalpha/.setalphaisshape for the improved solution
-       **** WARNING: .setopacityalpha is deprecated (as of 9.53.0) and will be removed in a future release
-       **** See .setfillconstantalpha/.setalphaisshape for the improved solution
     pslegend [WARNING]: Representation of font type not recognized. Using default.
 
 
@@ -1230,3 +1223,193 @@ Images.load("utah/maps/signatures-3.png")
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_49_1.png)
     
 
+
+## Spatial distribution of the extracted geothermal features (signals)
+
+
+```julia
+for i in Sorder[1]
+	inversedistancefield = Array{Float64}(undef, length(xgrid), length(ygrid))
+	v = W[kopt][:,i] ./ maximum(W[kopt][:,i])
+	iz = .!isnan.(v)
+	icoord = coord[:,iz]
+	v = v[iz]
+	for (i, x) in enumerate(xgrid), (j, y) in enumerate(ygrid)
+			inversedistancefield[i, j] = Kriging.inversedistance(permutedims([x y]), icoord, v, 2; cutoff=1000)[1]
+	end
+	imax = NMFk.maximumnan(inversedistancefield)
+	imin = NMFk.minimumnan(inversedistancefield)
+	NMFk.plotmatrix(rotl90(inversedistancefield); quiet=false, filename="utah/maps/Signal_$(signallabels[i])_map_inversedistance_prediction.png", title="Signal $(signallabels[i])", maxvalue=imin + (imax - imin)/ 2)
+end
+```
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_51_0.png)
+    
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_51_1.png)
+    
+
+
+    
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_51_3.png)
+    
+
+
+    
+
+## Map of NMFk predicted geothermal attributes
+
+Our ML "fills in" the gaps in our knowledge:
+
+
+```julia
+Xe = W[kopt]  * H[kopt]
+
+for i = 1:nattributes
+		inversedistancefield = Array{Float64}(undef, length(xgrid), length(ygrid))
+		v = Xe[:,i]
+		iz = .!isnan.(v)
+		icoord = coord[:,iz]
+		v = v[iz]
+		for (i, x) in enumerate(xgrid), (j, y) in enumerate(ygrid)
+				inversedistancefield[i, j] = Kriging.inversedistance(permutedims([x y]), icoord, v, 2; cutoff=1000)[1]
+		end
+		imax = NMFk.maximumnan(inversedistancefield)
+		imin = NMFk.minimumnan(inversedistancefield)
+		NMFk.plotmatrix(rotl90(inversedistancefield); quiet=false, filename="utah/maps/Attribute_$(attributes[i])_map_inversedistance_prediction.png", title="$(attributes[i])", maxvalue=imin + (imax - imin)/ 2)
+end
+```
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_0.png)
+    
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_1.png)
+    
+
+
+    
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_3.png)
+    
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_4.png)
+    
+
+
+    
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_6.png)
+    
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_7.png)
+    
+
+
+    
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_9.png)
+    
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_10.png)
+    
+
+
+    
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_12.png)
+    
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_13.png)
+    
+
+
+    
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_15.png)
+    
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_16.png)
+    
+
+
+    
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_18.png)
+    
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_19.png)
+    
+
+
+    
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_21.png)
+    
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_22.png)
+    
+
+
+    
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_24.png)
+    
+
+
+
+    
+![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_25.png)
+    
+
+
+    

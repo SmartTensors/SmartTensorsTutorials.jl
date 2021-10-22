@@ -70,8 +70,8 @@ resultdir = "utah/results";
 
 nruns = 100;
 
-# W, H, fitquality, robustness, aic = NMFk.execute(Xnl, nkrange, nruns; cutoff=0.3, resultdir=resultdir, casefilename="nmfk-nl", load=true)
-W, H, fitquality, robustness, aic = NMFk.load(nkrange, nruns; cutoff=0.3, resultdir=resultdir, casefilename="nmfk-nl");
+# W, H, fitquality, robustness, aic, kopt = NMFk.execute(Xnl, nkrange, nruns; cutoff=0.3, resultdir=resultdir, casefilename="nmfk-nl", load=true)
+W, H, fitquality, robustness, aic, kopt = NMFk.load(nkrange, nruns; cutoff=0.3, resultdir=resultdir, casefilename="nmfk-nl");
 
 NMFk.getks(nkrange, robustness[nkrange], 0.3)
 
@@ -85,12 +85,16 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
 
 Mads.display("utah/results-postprocessing-nl-100/attributes-3-groups.txt")
 
-locations, lhs = DelimitedFiles.readdlm("utah/results-postprocessing-nl-100/locations-3.csv", ',', header=true)
-clusters = sort(unique(locations[:,end]))
-for i=1:size(clusters,1)
-	locations[locations .== clusters[i]] .= Integer(i)
+ldata, lhs = DelimitedFiles.readdlm("utah/results-postprocessing-nl-100/locations-3.csv", ',', header=true)
+signallabels = unique(sort(ldata[:,end]))
+zcolor = Vector{Int64}(undef, length(ldata[:,1]))
+for i = 1:length(clusters)
+	ci = ldata[:,end] .== signallabels[i]
+	println("Signal $(signallabels[i])")
+	si = sortperm(ldata[ci,2+i]; rev=true)
+	display([ldata[ci,1:3] ldata[ci,3+i]][si,:][1:10,:])
+	zcolor[ci] .= i
 end
-locations = convert.(Float32, locations)
 
 GMT.grdimage("utah/maps/utah.nc", shade=(azimuth=100, norm="e0.8"), proj=:Mercator,
     color=GMT.makecpt(color=:grayC, transparency=10, range=(0,5000,500), continuous=true),
@@ -102,9 +106,39 @@ GMT.legend!(box=(pen=false, fill=:white),
                 "S 0.10i c 0.10i gold 0.25p 0.2i B"
                 "S 0.10i c 0.10i blue 0.25p 0.2i C"]),
             par=(:FONT_ANNOT_PRIMARY, "8p,Arial"))
-GMT.scatter!(locations[:,2], locations[:,3], marker=:c, markersize=:0.15,
-    color=(:red, :gold, :blue), zcolor=locations[:,end], alpha=10,
+GMT.scatter!(ldata[:,2], ldata[:,3], marker=:c, markersize=:0.15,
+    color=(:red, :gold, :blue), zcolor=zcolor, alpha=10,
     coast=(proj=:Mercator, 
     DCW=(country="US.UT", pen=(0.5,:black))),
     fmt=:png, savefig="utah/maps/signatures-3")
 Images.load("utah/maps/signatures-3.png")
+
+for i in Sorder[1]
+	inversedistancefield = Array{Float64}(undef, length(xgrid), length(ygrid))
+	v = W[kopt][:,i] ./ maximum(W[kopt][:,i])
+	iz = .!isnan.(v)
+	icoord = coord[:,iz]
+	v = v[iz]
+	for (i, x) in enumerate(xgrid), (j, y) in enumerate(ygrid)
+			inversedistancefield[i, j] = Kriging.inversedistance(permutedims([x y]), icoord, v, 2; cutoff=1000)[1]
+	end
+	imax = NMFk.maximumnan(inversedistancefield)
+	imin = NMFk.minimumnan(inversedistancefield)
+	NMFk.plotmatrix(rotl90(inversedistancefield); quiet=false, filename="utah/maps/Signal_$(signallabels[i])_map_inversedistance_prediction.png", title="Signal $(signallabels[i])", maxvalue=imin + (imax - imin)/ 2)
+end
+
+Xe = W[kopt]  * H[kopt]
+
+for i = 1:nattributes
+		inversedistancefield = Array{Float64}(undef, length(xgrid), length(ygrid))
+		v = Xe[:,i]
+		iz = .!isnan.(v)
+		icoord = coord[:,iz]
+		v = v[iz]
+		for (i, x) in enumerate(xgrid), (j, y) in enumerate(ygrid)
+				inversedistancefield[i, j] = Kriging.inversedistance(permutedims([x y]), icoord, v, 2; cutoff=1000)[1]
+		end
+		imax = NMFk.maximumnan(inversedistancefield)
+		imin = NMFk.minimumnan(inversedistancefield)
+		NMFk.plotmatrix(rotl90(inversedistancefield); quiet=false, filename="utah/maps/Attribute_$(attributes[i])_map_inversedistance_prediction.png", title="$(attributes[i])", maxvalue=imin + (imax - imin)/ 2)
+end
