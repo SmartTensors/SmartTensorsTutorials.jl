@@ -8,7 +8,7 @@ Random.seed!(2022)
 r = rand(100)
 f1(x) = sin(x/10) / 2 + 0.5
 s1 = f1.(1:100)
-f2(x) = exp(x/200) - 1
+f2(x) = (exp(x/20) - 1 ) / 10
 s2 = f2.(1:100)
 f3(x) = sin(x) / 2 + 0.5
 s3 = f3.(1:100)
@@ -19,34 +19,55 @@ y = s1 .+ s2 .+ s3
 
 Mads.plotseries(y, "Mixed signals.png"; title="Mixed signals", name="")
 
-function anal_model(p)
-	y = [s1 s2 s3] .* permutedims(p)
+function anal_model(p; v=1:100)
+	y = [f1.(v) f2.(v) f3.(v)] .* permutedims(p)
 	return vec(sum(y; dims=2))
 end
 
 function ml0_model(; input=3, output=100, v=1:output, device=Flux.gpu)
-	model = device(Flux.Chain(Flux.Dense(input, 32, Flux.relu), Flux.Dense(32, output)))
+	model = device(Flux.Chain(Flux.Dense(input, 8), Flux.Dense(8, output)))
 	return model, Flux.params(model)
 end
 
 function ml1_model(; input=3, output=100, v=1:output, device=Flux.gpu)
-	model = device(Flux.Chain(Flux.SkipConnection(Flux.Chain(Flux.Dense(input, 32), Flux.Dense(32, output)), (x2, x)->(x2 .+ x[1:1,:] .* f1.(v)))))
+	model = device(Flux.Chain(Flux.SkipConnection(Flux.Chain(Flux.Dense(input, 8), Flux.Dense(8, output)), (x2, x)->(x2 .+ x[1:1,:] .* f1.(v)))))
 	return model, Flux.params(model)
 end
 
 function ml2_model(; input=3, output=100, v=1:output, device=Flux.gpu)
-	model = device(Flux.Chain(Flux.SkipConnection(Flux.Chain(Flux.Dense(input, 32), Flux.Dense(32, output)), (x2, x)->(x2 .+ x[2:2,:] .* f2.(v)))))
+	model = device(Flux.Chain(Flux.SkipConnection(Flux.Chain(Flux.Dense(input, 8), Flux.Dense(8, output)), (x2, x)->(x2 .+ x[2:2,:] .* f2.(v)))))
 	return model, Flux.params(model)
 end
 
 function ml3_model(; input=3, output=100, v=1:output, device=Flux.gpu)
-	model = device(Flux.Chain(Flux.SkipConnection(Flux.Chain(Flux.Dense(input, 32), Flux.Dense(32, output)), (x2, x)->(x2 .+ x[3:3,:] .* f3.(v)))))
+	model = device(Flux.Chain(Flux.SkipConnection(Flux.Chain(Flux.Dense(input, 8), Flux.Dense(8, output)), (x2, x)->(x2 .+ x[3:3,:] .* f3.(v)))))
 	return model, Flux.params(model)
 end
 
+function ml2a_model(; input=3, output=100, v=1:output, device=Flux.gpu)
+	d1 = device(Flux.Dense(input-1, 8))
+	d2 = device(Flux.Dense(8, output))
+	model = device(Flux.Chain(x->(x, d1(x[1:end-1,:])), ((x, x1)::Tuple)->(x, d2(x1)), ((x, x2)::Tuple)->(x2 .+ x[1:1,:] .* f1.(v))))
+	return model, Flux.params((d1, d2))
+end
+
+function ml2a_model(; input=3, output=100, v=1:output, device=Flux.gpu)
+	d1 = device(Flux.Dense(input-1, 8))
+	d2 = device(Flux.Dense(8, output))
+	model = device(Flux.Chain(x->(x, d1(x[1:end-1,:])), ((x, x1)::Tuple)->(x, d2(x1)), ((x, x2)::Tuple)->(x2 .+ x[2:2,:] .* f2.(v))))
+	return model, Flux.params((d1, d2))
+end
+
 function ml3a_model(; input=3, output=100, v=1:output, device=Flux.gpu)
-	d1 = device(Flux.Dense(input-1, 32))
-	d2 = device(Flux.Dense(32, output))
+	d1 = device(Flux.Dense(input-1, 8))
+	d2 = device(Flux.Dense(8, output))
+	model = device(Flux.Chain(x->(x, d1(x[1:end-1,:])), ((x, x1)::Tuple)->(x, d2(x1)), ((x, x2)::Tuple)->(x2 .+ x[3:3,:] .* f3.(v))))
+	return model, Flux.params((d1, d2))
+end
+
+function ml3a_model(; input=3, output=100, v=1:output, device=Flux.gpu)
+	d1 = device(Flux.Dense(input-1, 8))
+	d2 = device(Flux.Dense(8, output))
 	model = device(Flux.Chain(x->(x, d1(x[1:end-1,:])), ((x, x1)::Tuple)->(x, d2(x1)), ((x, x2)::Tuple)->(x2 .+ x[3:3,:] .* f3.(v))))
 	return model, Flux.params((d1, d2))
 end
@@ -79,12 +100,12 @@ function loss(data_loader, model, device)
 end
 
 @Base.kwdef mutable struct Args
-	sizetrain = 1000
-	sizetest = 200
+	sizetrain = 500
+	sizetest = 500
 	η::Float64 = 3e-4       # learning rate
 	batchsize::Int = 100    # batch size
-	epochs::Int = 200        # number of epochs
-	use_cuda::Bool = true   # use gpu (if cuda available)
+	epochs::Int = 100        # number of epochs
+	use_cuda::Bool = false   # use gpu (if cuda available)
 end
 
 function train(ml_model; kws...)
@@ -126,4 +147,10 @@ function train(ml_model; kws...)
 	return model
 end
 
-model = train(ml3a_model)
+model0 = train(ml0_model)
+model1 = train(ml1_model)
+model2 = train(ml2_model)
+model3 = train(ml3_model)
+p = rand(3)
+Mads.plotseries([anal_model(p) model0(p) model1(p) model2(p) model3(p)], "Model comparisons.png"; names=["Truth", "ML", "PIML 1", "PIML 2", "PIML 3"], hsize=12Gadfly.inch)
+model3a = train(ml3a_model)
