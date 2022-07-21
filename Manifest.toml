@@ -1456,12 +1456,6 @@ git-tree-sha1 = "5d494bc6e85c4c9b626ee0cab05daa4085486ab1"
 uuid = "5ced341a-0733-55b8-9ab6-a4889d929147"
 version = "1.9.3+0"
 
-[[MATLAB]]
-deps = ["Libdl", "SparseArrays"]
-git-tree-sha1 = "9edb97bacd74c960b27d6fd230e139689fdc4a7b"
-uuid = "10e44e05-a98a-55b3-a45b-ba969058deb6"
-version = "0.8.2"
-
 [[METIS_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
 git-tree-sha1 = "1d31872bb9c5e7ec1f618e8c4a56c8b0d9bddc7e"
@@ -1669,7 +1663,7 @@ uuid = "a00861dc-f156-4864-bf3c-e6376f28a68d"
 version = "0.2.3"
 
 [[NTFk]]
-deps = ["Arpack", "CanDecomp", "Colors", "Compose", "Conda", "Dates", "DelimitedFiles", "Distributed", "DistributedArrays", "DocumentFunction", "FileIO", "Gadfly", "Images", "Interpolations", "Ipopt", "JLD", "JLD2", "LinearAlgebra", "LoadTensorDecompositions", "MATLAB", "Mads", "Measures", "NMFk", "Pkg", "Printf", "PyCall", "PyPlot", "Random", "SharedArrays", "SparseArrays", "Statistics", "TensorDecompositions", "TensorOperations", "TensorToolbox", "Test"]
+deps = ["Arpack", "CanDecomp", "Colors", "Compose", "Conda", "Dates", "DelimitedFiles", "Distributed", "DistributedArrays", "DocumentFunction", "FileIO", "Gadfly", "Images", "Interpolations", "Ipopt", "JLD", "JLD2", "LinearAlgebra", "LoadTensorDecompositions", "Mads", "Measures", "NMFk", "Pkg", "Printf", "PyCall", "PyPlot", "Random", "SharedArrays", "SparseArrays", "Statistics", "TensorDecompositions", "TensorOperations", "TensorToolbox", "Test"]
 git-tree-sha1 = "a3a6a25c67f648c32549d24529a09d8c71d55048"
 uuid = "1226e131-0b97-51f8-8a3f-c1798118cd52"
 version = "1.1.4"
