@@ -1,4 +1,4 @@
-# GSA/AGU 2021 workshop
+# SmartTensors workshop materials
 
 ## Contents
 
