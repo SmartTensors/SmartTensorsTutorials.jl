@@ -8,7 +8,7 @@ This notebook is a part of the GeoThermalCloud.jl: Machine Learning Framework fo
 
 ## GeoThermalCloud installation
 
-If **GeoThermalCloud** is not installed, first execute in the Julia REPL: 
+If **GeoThermalCloud** is not installed, first execute in the Julia REPL:
 
 ```julia
 import Pkg
@@ -66,21 +66,21 @@ GMT.grdimage("utah/maps/utah.nc", proj=:Mercator, shade=(azimuth=100, norm="e0.8
 	figsize=8, conf=(MAP_FRAME_TYPE="plain", MAP_GRID_PEN_PRIMARY="thinnest,gray,.",
 	MAP_GRID_CROSS_SIZE_SECONDARY=0.1, MAP_FRAME_PEN=0.5, MAP_TICK_PEN_PRIMARY=0.1,
 	MAP_TICK_LENGTH_PRIMARY=0.01), frame=(axis="lrtb"))
-GMT.plot!(xcoord, ycoord, fill=:cyan, marker=:c, markersize=0.1, coast=(proj=:Mercator, 
+GMT.plot!(xcoord, ycoord, fill=:cyan, marker=:c, markersize=0.1, coast=(proj=:Mercator,
     DCW=(country="US.UT", pen=(0.5,:black))),
     fmt=:png, savefig="utah/maps/locations");
 Images.load("utah/maps/locations.png")
 ```
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_8_0.png)
-    
+
 
 
 ## Define data attributes
 
-We can use attribute names from the header in the input file. 
+We can use attribute names from the header in the input file.
 
 However, the names are short.
 
@@ -135,9 +135,9 @@ NMFk.datanalytics(X, attributes_long; dims=2);
 ```
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_0.png)
-    
+
 
 
     ┌ Info: Temperature (C)
@@ -145,21 +145,21 @@ NMFk.datanalytics(X, attributes_long; dims=2);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_2.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_3.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_4.png)
-    
+
 
 
     Temperature (C): Min 0.1 Max 261.0 StdDev 9.497179 Skewness 10.095466 Count 5214
@@ -174,21 +174,21 @@ NMFk.datanalytics(X, attributes_long; dims=2);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_6.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_7.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_8.png)
-    
+
 
 
     pH (): Min 3.4 Max 10.2 StdDev 0.44822767 Skewness -0.45681924 Count 3941
@@ -203,21 +203,21 @@ NMFk.datanalytics(X, attributes_long; dims=2);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_10.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_11.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_12.png)
-    
+
 
 
     B (ppm): Min 0.0 Max 76.5 StdDev 2.6950865 Skewness 15.190172 Count 2284
@@ -232,21 +232,21 @@ NMFk.datanalytics(X, attributes_long; dims=2);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_14.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_15.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_16.png)
-    
+
 
 
     Br (ppm): Min 0.0 Max 84.0 StdDev 11.680384 Skewness 3.435088 Count 621
@@ -261,21 +261,21 @@ NMFk.datanalytics(X, attributes_long; dims=2);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_18.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_19.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_20.png)
-    
+
 
 
     HCO3 (ppm): Min 37.0 Max 9217.0 StdDev 329.8163 Skewness 22.165213 Count 915
@@ -290,15 +290,15 @@ NMFk.datanalytics(X, attributes_long; dims=2);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_22.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_21_23.png)
-    
+
 
 
     Mg (ppm): Min 0.0 Max 8500.0 StdDev 663.7361 Skewness 6.581147 Count 3760
@@ -363,130 +363,130 @@ end
 ```
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_0.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_1.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_3.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_4.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_6.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_7.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_9.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_10.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_12.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_13.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_15.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_16.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_18.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_19.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_21.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_22.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_24.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_23_25.png)
-    
 
 
-    
+
+
 
 ## Log-transformation
 
@@ -528,9 +528,9 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
 ```
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_0.png)
-    
+
 
 
     ┌ Info: Temperature: log10-transformed
@@ -538,21 +538,21 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_2.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_3.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_4.png)
-    
+
 
 
     Temperature: Min -1.0 Max 2.4166405 StdDev 0.19028741 Skewness -0.5570712 Count 5214
@@ -567,21 +567,21 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_6.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_7.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_8.png)
-    
+
 
 
     pH: Min 3.4 Max 10.2 StdDev 0.44822767 Skewness -0.45681924 Count 3941
@@ -596,21 +596,21 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_10.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_11.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_12.png)
-    
+
 
 
     B: Min -3.30103 Max 1.8836614 StdDev 0.77384454 Skewness 0.08153698 Count 2284
@@ -625,15 +625,15 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_14.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_15.png)
-    
+
 
 
     Br: Min -3.0 Max 1.9242793 StdDev 1.0616237 Skewness 0.5956521 Count 621
@@ -645,21 +645,21 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_17.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_18.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_19.png)
-    
+
 
 
     Cl: Min -0.22184873 Max 5.3802114 StdDev 1.0519629 Skewness 1.1927316 Count 3923
@@ -674,21 +674,21 @@ NMFk.datanalytics(X, attributes; dims=2, logv=logv);
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_21.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_22.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_26_23.png)
-    
+
 
 
     Li: Min -3.9586072 Max 2.9867718 StdDev 1.4681796 Skewness 0.6889145 Count 551
@@ -811,12 +811,12 @@ NMFk.plot_feature_selecton(nkrange, fitquality, robustness; figuredir=figuredirp
 ```
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_42_0.png)
-    
 
 
-    
+
+
 
 ## Analysis of the optimal solution
 
@@ -866,9 +866,9 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_4.png)
-    
+
 
 
     ┌ Warning: Procedure to find unique signals could not identify a solution ...
@@ -902,40 +902,40 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_6.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_8.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_9.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_11.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_12.png)
-    
 
 
-    
+
+
 
 
     2131×2 Matrix{Any}:
@@ -949,7 +949,7 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
      "1797"  0.924136
      "3405"  0.924069
      "2566"  0.905143
-     ⋮       
+     ⋮
      "350"   0.492666
      "341"   0.491852
      "2730"  0.487104
@@ -973,7 +973,7 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
      "4319"  0.857647
      "4788"  0.855117
      "2468"  0.831267
-     ⋮       
+     ⋮
      "375"   0.203084
      "159"   0.202853
      "3798"  0.198906
@@ -997,7 +997,7 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
      "5048"  0.914722
      "5006"  0.910949
      "5095"  0.910366
-     ⋮       
+     ⋮
      "4154"  0.174466
      "4710"  0.174457
      "3376"  0.172963
@@ -1010,9 +1010,9 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_17.png)
-    
+
 
 
     ┌ Info: Locations (signals=3)
@@ -1038,68 +1038,68 @@ Sorder, Wclusters, Hclusters = NMFk.clusterresults(NMFk.getk(nkrange, robustness
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_19.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_21.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_22.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_24.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_25.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_27.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_28.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_44_30.png)
-    
 
 
-    
+
+
 
 
     ([[1, 2, 3]], [['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'B'  …  'A', 'B', 'B', 'B', 'A', 'B', 'B', 'A', 'A', 'A']], [['A', 'B', 'B', 'A', 'C', 'C', 'B', 'A', 'C', 'B', 'A', 'B', 'A', 'B', 'B', 'A', 'B', 'B']])
 
 
-## Associations of the data attributes with the extracted signatures 
+## Associations of the data attributes with the extracted signatures
 
 
 ```julia
@@ -1113,7 +1113,7 @@ Mads.display("utah/results-postprocessing-nl-100/attributes-3-groups.txt")
     Mg         	0.788
     Ca         	0.768
     HCO3       	0.549
-    
+
     Signal B (S2)
     δO18       	1.0
     Cl         	0.651
@@ -1124,22 +1124,22 @@ Mads.display("utah/results-postprocessing-nl-100/attributes-3-groups.txt")
     B          	0.587
     K          	0.475
     Li         	0.415
-    
+
     Signal C (S3)
     Be         	1.0
     Al         	0.673
     TDS        	0.333
-    
 
 
-## Associations of the data locations with the extracted signatures 
+
+## Associations of the data locations with the extracted signatures
 
 
 ```julia
 ldata, lhs = DelimitedFiles.readdlm("utah/results-postprocessing-nl-100/locations-3.csv", ',', header=true)
 signallabels = unique(sort(ldata[:,end]))
 zcolor = Vector{Int64}(undef, length(ldata[:,1]))
-for i = 1:length(clusters)
+for i = eachindex(clusters)
 	ci = ldata[:,end] .== signallabels[i]
 	println("Signal $(signallabels[i])")
 	si = sortperm(ldata[ci,2+i]; rev=true)
@@ -1209,7 +1209,7 @@ GMT.legend!(box=(pen=false, fill=:white),
             par=(:FONT_ANNOT_PRIMARY, "8p,Arial"))
 GMT.scatter!(ldata[:,2], ldata[:,3], marker=:c, markersize=:0.15,
     color=(:red, :gold, :blue), zcolor=zcolor, alpha=10,
-    coast=(proj=:Mercator, 
+    coast=(proj=:Mercator,
     DCW=(country="US.UT", pen=(0.5,:black))),
     fmt=:png, savefig="utah/maps/signatures-3")
 Images.load("utah/maps/signatures-3.png")
@@ -1219,9 +1219,9 @@ Images.load("utah/maps/signatures-3.png")
 
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_49_1.png)
-    
+
 
 
 ## Spatial distribution of the extracted geothermal features (signals)
@@ -1244,26 +1244,26 @@ end
 ```
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_51_0.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_51_1.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_51_3.png)
-    
 
 
-    
+
+
 
 ## Map of NMFk predicted geothermal attributes
 
@@ -1289,127 +1289,127 @@ end
 ```
 
 
-    
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_0.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_1.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_3.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_4.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_6.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_7.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_9.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_10.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_12.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_13.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_15.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_16.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_18.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_19.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_21.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_22.png)
-    
 
 
-    
 
 
-    
+
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_24.png)
-    
 
 
 
-    
+
+
 ![png](GeoThermalCloud_Utah_files/GeoThermalCloud_Utah_53_25.png)
-    
 
 
-    
+
+

@@ -20,7 +20,7 @@ GMT.grdimage("utah/maps/utah.nc", proj=:Mercator, shade=(azimuth=100, norm="e0.8
 	figsize=8, conf=(MAP_FRAME_TYPE="plain", MAP_GRID_PEN_PRIMARY="thinnest,gray,.",
 	MAP_GRID_CROSS_SIZE_SECONDARY=0.1, MAP_FRAME_PEN=0.5, MAP_TICK_PEN_PRIMARY=0.1,
 	MAP_TICK_LENGTH_PRIMARY=0.01), frame=(axis="lrtb"))
-GMT.plot!(xcoord, ycoord, fill=:cyan, marker=:c, markersize=0.1, coast=(proj=:Mercator, 
+GMT.plot!(xcoord, ycoord, fill=:cyan, marker=:c, markersize=0.1, coast=(proj=:Mercator,
     DCW=(country="US.UT", pen=(0.5,:black))),
     fmt=:png, savefig="utah/maps/locations");
 Images.load("utah/maps/locations.png")
@@ -88,7 +88,7 @@ Mads.display("utah/results-postprocessing-nl-100/attributes-3-groups.txt")
 ldata, lhs = DelimitedFiles.readdlm("utah/results-postprocessing-nl-100/locations-3.csv", ',', header=true)
 signallabels = unique(sort(ldata[:,end]))
 zcolor = Vector{Int64}(undef, length(ldata[:,1]))
-for i = 1:length(clusters)
+for i = eachindex(clusters)
 	ci = ldata[:,end] .== signallabels[i]
 	println("Signal $(signallabels[i])")
 	si = sortperm(ldata[ci,2+i]; rev=true)
@@ -108,7 +108,7 @@ GMT.legend!(box=(pen=false, fill=:white),
             par=(:FONT_ANNOT_PRIMARY, "8p,Arial"))
 GMT.scatter!(ldata[:,2], ldata[:,3], marker=:c, markersize=:0.15,
     color=(:red, :gold, :blue), zcolor=zcolor, alpha=10,
-    coast=(proj=:Mercator, 
+    coast=(proj=:Mercator,
     DCW=(country="US.UT", pen=(0.5,:black))),
     fmt=:png, savefig="utah/maps/signatures-3")
 Images.load("utah/maps/signatures-3.png")
