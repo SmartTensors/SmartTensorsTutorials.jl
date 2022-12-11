@@ -1,12 +1,12 @@
 import NMFk
 import Mads
 import Clustering
-import Cairo
-import Fontconfig
 import Statistics
 import Distances
 import Plots
 import Random
+
+cd(@__DIR__)
 
 Random.seed!(2021)
 
@@ -31,7 +31,7 @@ result = Clustering.kmeans(X, 3); # run K-means for the 3 clusters
 
 M = result.centers # center of clusters
 
-size = Clustering.counts(result) # cluster size ==> number of data points for each cluster
+csize = Clustering.counts(result)
 
 a = Clustering.assignments(result)
 
